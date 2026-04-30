@@ -247,3 +247,8 @@ a:hover {
 #margin60 {
     margin-left: 60px;
 }
+
+#text-decoration {
+    text-decoration: none;
+    color: inherit;
+}
