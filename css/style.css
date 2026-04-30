@@ -105,7 +105,7 @@ section div div span {
     font-weight: 500;
 }
 
-#orden {
+.orden {
     padding: 0 0 30px 55px;
 }
 
@@ -251,4 +251,12 @@ a:hover {
 #text-decoration {
     text-decoration: none;
     color: inherit;
+}
+
+.orden:hover {
+    transform: scale(1.10) rotate(3deg);
+}
+
+.orden:hover .cuadro-azul{
+    background-color: var(--accent-color);
 }
