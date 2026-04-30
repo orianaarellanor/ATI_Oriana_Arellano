@@ -7,85 +7,32 @@
     <title>Oriana Arellano</title>
     <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png">
     <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<style>
-    @import url("css/_theme.css");
-
-    #azul {
-        height: 500px;
-        width: 405px;
-        background-color: var(--main-color);
-    }
-
-    #borde-redondo {
-        border-bottom-right-radius: 100px;
-    }
-
-    #margen {
-        margin-top: 0px;
-        margin-right: 15px;
-        margin-bottom: 10px;
-        margin-left: 15px;
-        width: 700px;
-    }
-
-    .main-color {
-        color: var(--main-color);
-    }
-
-    * {
-        font-family: var(--primary-font);
-    }
-
-    #flex-font {
-        font-family: var(--flex-font);
-        font-style: italic;
-    }
-
-    #section {
-        display: flex; 
-        width: 1100px; 
-        box-shadow: 10px 10px 20px var(--grey-200);
-    }
-
-    a:hover {
-        color: var(--accent-color);
-    }
-
-    #lista {
-        list-style-type: none; 
-        padding: 0; 
-        line-height: 1.5;
-    }
-
-    #margin84 {
-        margin-left: 84px;
-    }
-
-    #margin88 {
-        margin-left: 88px;
-    }
-
-    #margin10 {
-        margin-left: 10px;
-    }
-
-    #margin42 {
-        margin-left: 42px;
-    }
-
-    #margin60 {
-        margin-left: 60px;
-    }
-</style>
 
 <body>
+    <header>
+        <nav>
+            <div id="font-size1">
+                <h1>ATI<span id="font-size2">[UCV]</span>Log</h1>
+            </div>
 
-    <header></header>
+            <form action="/buscar">
+                <input type="search" placeholder="Nombre...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div id="circulo-decorativo">
+                <img src="icon/userIcon.svg" alt="Icono de Usuario" id="icono">
+            </div>
+
+        </nav>
+    </header>
+
     <section id="section">
         <div id="azul">
-            <img src="28309661.jpeg" alt="Foto Oriana Arellano" height="500px" width="385px" id="borde-redondo">
+            <img src="28309661.jpeg" alt="Foto Oriana Arellano" id="borde-redondo">
         </div>
         <div id="margen">
             <h1 class="main-color">Oriana Arellano</h1>
@@ -102,11 +49,16 @@
                 <li>Mi videojuego favorito es: <span id="margin42">It Takes Two</span></li>
                 <li><strong>Lenguajes aprendidos: <span id="margin60">C/C++, Java, Kotlin, Prolog, Haskell</strong></li>
             </ul>
-            <p>Si necesitan comunicarse conmigo me pueden escribir a: <br> <strong><a href="mailto:orianaarellanor@gmail.com" class="main-color">orianaarellanor@gmail.com</a></strong></p>
+            <p>Si necesitan comunicarse conmigo me pueden escribir a: <br> <strong><a
+                        href="mailto:orianaarellanor@gmail.com"
+                        class="main-color">orianaarellanor@gmail.com</a></strong></p>
         </div>
     </section>
 
-    <footer></footer>
+    <footer>
+        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+    </footer>
+    
 </body>
 
 </html>
