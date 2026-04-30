@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATI[UCV]Log 2026-1</title>
+    <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png">
+    <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png">
+
+    <style>
+        @import url("css/_theme.css");
+
+        * {
+            font-family: var(--primary-font);
+        }
+
+        #background {
+            background-color: var(--grey-50);
+        }
+
+        #font-size1 {
+            font-size: 25px;
+            color: var(--white);
+        }
+
+        #font-size2 {
+            font-size: 20px;
+            font-family: var(--flex-font);
+            font-weight: normal;
+        }
+
+        #font-color {
+            color: var(--white);
+        }
+
+        nav {
+            background-color: var(--main-color);
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        nav form {
+            padding: 0 80px;
+            display: flex;
+        }
+
+        input {
+            border: none;
+            border-radius: 15px 0px 0px 15px;
+            border-right: none;
+            padding: 12px 40px;
+            padding-left: 10px;
+        }
+
+        button {
+            border: none;
+            background-color: var(--accent-color);
+            border-radius: 0px 15px 15px 0px;
+            border-left: none;
+            padding: 12px 40px;
+            color: var(--white);
+        }
+
+        #circulo-decorativo {
+            height: 50px;
+            width: 50px;
+            background-color: var(--accent-color);
+            border-radius: 50px;
+            padding: 5px;
+        }
+
+        #icono {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+        }
+
+        #font-color {
+            color: var(--grey-800);
+            padding: 0 40px;
+        }
+
+        section div img {
+            height: 200px;
+            width: 220px;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            border-bottom: none;
+            display: flex;
+        }
+
+        .cuadro-image {
+            width: 210px;
+            height: 20px;
+            background-color: var(--white);
+            display: flex;
+            border-top: none;
+            flex-direction: column;
+        }
+
+        .cuadro-azul {
+            background-color: var(--main-color);
+            border-radius: 0 0 15px 15px;
+            display: flex;
+            height: 15px;
+            width: 220px;
+        }
+
+        section div div span {
+            margin: 0;
+            padding: 20px 0 20px 10px;
+            color: var(--grey-950);
+            font-weight: 500;
+        }
+
+        #orden {
+            padding: 0 0 30px 55px;
+        }
+
+        .display-flex {
+            display: flex;
+        }
+
+        footer p{
+            color: var(--grey-200);
+            text-align: center;
+            border-top: 2px solid var(--grey-200);
+            padding: 25px;
+        }
+
+    </style>
+</head>
+
+<body id="background">
+
+    <header>
+        <nav>
+            <div id="font-size1">
+                <h1>ATI<span id="font-size2">[UCV]</span>Log</h1>
+            </div>
+
+            <form action="/buscar">
+                <input type="search" placeholder="Nombre...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div id="circulo-decorativo">
+                <img src="icon/userIcon.svg" alt="Icono de Usuario" id="icono">
+            </div>
+
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <div id="font-color">
+                <h1>Semestre 2026-1</h1>
+            </div>
+        </div>
+
+        <div class="display-flex">
+            <div id="orden">
+                <img src="28309661.jpeg" alt="Foto Oriana Arellano">
+                <span class="cuadro-image">Oriana Arellano</span>
+                <div class="cuadro-azul"></div>
+            </div>
+
+            <div id="orden"><img src="Dummies/Dummy1.png" alt="Foto Helena Torres">
+                <span class="cuadro-image">Helena Torres</span>
+                <div class="cuadro-azul"></div>
+            </div>
+
+            <div id="orden"><img src="Dummies/Dummy2.png" alt="Foto Carlos Blanco">
+                <span class="cuadro-image">Carlos Blanco</span>
+                <div class="cuadro-azul"></div>
+            </div>
+        </div>
+
+        <div class="display-flex">
+            <div id="orden"><img src="Dummies/Dummy3.png" alt="Foto Juan Gutierrez">
+                <span class="cuadro-image">Juan Gutierrez</span>
+                <div class="cuadro-azul"></div>
+            </div>
+
+            <div id="orden"> <img src="Dummies/Dummy4.png" alt="Foto Isabel Contreras">
+                <span class="cuadro-image">Isabel Contreras</span>
+                <div class="cuadro-azul"></div>
+            </div>
+
+            <div id="orden"><img src="Dummies/Dummy5.png" alt="Foto Gabriel Vargas">
+                <span class="cuadro-image">Gabriel Vargas</span>
+                <div class="cuadro-azul"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
