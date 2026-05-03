@@ -4,6 +4,10 @@
     font-family: var(--primary-font);
 }
 
+body {
+    margin: 0;
+}
+
 #background {
     background-color: var(--grey-50);
 }
@@ -96,6 +100,7 @@ section div div img {
     display: flex;
     height: 15px;
     width: 220px;
+    transition: background-color 1s;
 }
 
 section div div span {
@@ -107,6 +112,7 @@ section div div span {
 
 .orden {
     padding: 0 0 30px 55px;
+    transition: transform 1s;
 }
 
 .display-flex {
