@@ -2,61 +2,76 @@
 
 * {
     font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-}
-
-#background {
     background-color: var(--grey-50);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-#font-size1 {
-    font-size: 25px;
+nav:first-child {
+    font-size: 1.5rem;
     color: var(--white);
 }
 
-#font-size2 {
-    font-size: 20px;
+nav:first-child h1 {
+    font-weight: 600;
+}
+
+nav:first-child h1 span {
+    font-size: 1.5rem;
     font-family: var(--flex-font);
     font-weight: normal;
 }
 
-#font-color {
-    color: var(--white);
+section h1 {
+    color: var(--grey-800);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem;
 }
 
 nav {
     background-color: var(--main-color);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 1rem 1.5rem;
 }
 
 nav form {
-    padding: 0 80px;
     display: flex;
+    justify-content: center;
+    width: 50%;
 }
 
 input {
-    border: none;
-    border-radius: 15px 0px 0px 15px;
+    width: 70%;
+    border-radius: 20px 0px 0px 20px;
     border-right: none;
     padding: 12px 40px;
     padding-left: 10px;
+    border: none;
 }
 
 button {
-    border: none;
     background-color: var(--accent-color);
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 20px 20px 0px;
     border-left: none;
     padding: 12px 40px;
     color: var(--white);
+    border: none;
 }
 
-#circulo-decorativo {
+nav+div {
     height: 50px;
     width: 50px;
     background-color: var(--accent-color);
@@ -71,92 +86,102 @@ button {
     padding: 5px;
 }
 
-#font-color {
-    color: var(--grey-800);
-    padding: 0 40px;
-}
-
 section div div img {
     height: 200px;
     width: 220px;
-    border-radius: 15px 15px 0 0;
     object-fit: cover;
     border-bottom: none;
     display: flex;
+    border-radius: 10% 10% 0 0;
 }
 
-.cuadro-image {
-    width: 210px;
-    height: 20px;
+section div div h3 {
+    width: 100%;
+    height: 60px;
     background-color: var(--white);
-    display: flex;
-    border-top: none;
-    flex-direction: column;
-}
-
-.cuadro-azul {
-    background-color: var(--main-color);
-    border-radius: 0 0 15px 15px;
-    display: flex;
-    height: 15px;
-    width: 220px;
-    transition: background-color 1s;
-}
-
-section div div span {
-    margin: 0;
-    padding: 20px 0 20px 10px;
+    font-size: 1rem;
+    padding: 10% 0 5% 5%;
     color: var(--grey-950);
     font-weight: 500;
 }
 
-.orden {
-    padding: 0 0 30px 55px;
-    transition: transform 1s;
+section h1 {
+    color: var(--grey-950);
+    font-weight: 600;
+    margin-left: 2%;
 }
 
-.display-flex {
+.informacion-usuario {
     display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0px 20px 20px 20px;
+    justify-items: center;
+}
+
+.informacion-usuario div {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-radius: 10% 10% 10% 10%;
+    transition: transform 1s;
 }
 
 footer p {
     color: var(--grey-200);
     text-align: center;
     border-top: 2px solid var(--grey-200);
-    padding: 25px;
+    padding: 40px;
+    margin-top: auto;
 }
 
-#azul {
-    height: 500px;
-    width: 405px;
+header nav a h1 {
+    color: var(--white);
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 5px 0;
+}
+
+section[class] div:first-child {
     background-color: var(--main-color);
+    padding: 0 8px 0 0;
 }
 
-#borde-redondo {
-    border-bottom-right-radius: 100px;
+section[class] div:first-child img {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 80px;
+    max-width: 400px;
 }
 
-#margen {
-    margin-top: 0px;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    width: 700px;
+.margen {
+    display: flex;
+    padding: 40px;
+    width: 70%;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.main-color {
+section[class] h1 {
     color: var(--main-color);
+    font-size: 3rem;
+    margin: 0;
 }
 
-#flex-font {
+section[class] a {
+    color: var(--main-color);
+    font-size: 1.25rem;
+}
+
+.letra-cursiva {
     font-family: var(--flex-font);
     font-style: italic;
-}
-
-#section {
-    display: flex;
-    width: 1100px;
-    box-shadow: 10px 10px 20px var(--grey-200);
+    font-size: 1.25rem;
 }
 
 a:hover {
@@ -164,105 +189,164 @@ a:hover {
 }
 
 #lista {
-    list-style-type: none;
-    padding: 0;
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.25rem;
 }
 
-#margin84 {
-    margin-left: 84px;
+.item-perfil {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: start;
 }
 
-#margin88 {
-    margin-left: 88px;
+.negrita {
+    font-weight: bold;
 }
 
-#margin10 {
-    margin-left: 10px;
-}
-
-#margin42 {
-    margin-left: 42px;
-}
-
-#margin60 {
-    margin-left: 60px;
-}
-
-#azul {
-    height: 500px;
-    width: 405px;
-    background-color: var(--main-color);
-}
-
-#borde-redondo {
-    border-bottom-right-radius: 100px;
-    height: 500px;
-    width: 385px;
-}
-
-#margen {
-    margin-top: 0px;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    width: 700px;
-}
 
 .main-color {
     color: var(--main-color);
 }
 
-#flex-font {
-    font-family: var(--flex-font);
-    font-style: italic;
-}
-
-#section {
+.ficha-usuario {
     display: flex;
-    width: 1100px;
     box-shadow: 10px 10px 20px var(--grey-200);
+    width: 100%;
+    background-color: var(--white);
 }
 
-a:hover {
-    color: var(--accent-color);
-}
-
-#lista {
-    list-style-type: none;
-    padding: 0;
-    line-height: 1.5;
-}
-
-#margin84 {
-    margin-left: 84px;
-}
-
-#margin88 {
-    margin-left: 88px;
-}
-
-#margin10 {
-    margin-left: 10px;
-}
-
-#margin42 {
-    margin-left: 42px;
-}
-
-#margin60 {
-    margin-left: 60px;
-}
-
-#text-decoration {
-    text-decoration: none;
-    color: inherit;
-}
-
-.orden:hover {
+.informacion-usuario div:hover {
     transform: scale(1.10) rotate(3deg);
 }
 
-.orden:hover .cuadro-azul{
+.informacion-usuario div:hover {
     background-color: var(--accent-color);
+}
+
+.solo-movil {
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.solo-movil img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.imagen-pequeña {
+    display: none;
+}
+
+.imagen-grande {
+    display: block;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ficha-usuario {
+        flex-direction: column;
+    }
+
+    .imagen-pequeña {
+        display: block;
+    }
+
+    .imagen-grande {
+        display: none;
+    }
+
+    nav form {
+        display: none;
+    }
+
+    nav div {
+        display: none;
+    }
+
+    #icono {
+        display: none;
+    }
+
+    .solo-movil {
+        display: block;
+    }
+
+    nav:first-child h1 {
+        font-size: 1.5rem;
+    }
+
+    nav:first-child h1 span {
+        font-size: 0.75rem;
+    }
+
+    nav {
+        padding: 0.25rem 1rem;
+    }
+
+    section[class] h1 {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .margen {
+        padding: 20px 30px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .letra-cursiva {
+        font-size: 0.75rem;
+        margin-right: 40px;
+    }
+
+    #lista {
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+
+    .item-perfil {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    p {
+        font-size: 0.65rem;
+        margin-right: 40px;
+    }
+
+    section[class] a {
+        font-size: 0.65rem;
+    }
+
+    footer p {
+        font-size: 0.40rem;
+        padding: 25px 10px;
+        margin-top: 20px;
+    }
+
+    section h1 {
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+
+    .informacion-usuario {
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /*NO APLICA*/
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /*NO APLICA*/
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /*NO APLICA*/
 }

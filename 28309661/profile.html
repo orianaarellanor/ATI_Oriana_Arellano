@@ -14,46 +14,50 @@
 <body>
     <header>
         <nav>
-            <div id="font-size1">
-                <a href="../index.html" id="text-decoration">
-                    <h1>ATI<span id="font-size2">[UCV]</span>Log</h1>
-                </a>
+            <a href="../index.html">
+                <h1>ATI<span>[UCV]</span>Log</h1>
+            </a>
+            <form>
+                <input placeholder="Nombre...">
+                <button>Buscar</button>
+            </form>
+            <div>
+                <img src="../icon/userIcon.svg" alt="Icono de Usuario" id="icono">
             </div>
 
-            <form action="/buscar">
-                <input type="search" placeholder="Nombre...">
-                <button type="submit">Buscar</button>
-            </form>
-
-            <div id="circulo-decorativo">
-                <img src="../icon/userIcon.svg" alt="Icono de Usuario" id="icono">
+            <div class="solo-movil">
+                <img src="../icon/menuIcon.svg" alt="Icono Móvil">
             </div>
 
         </nav>
     </header>
 
-    <section id="section">
-        <div id="azul">
-            <img src="28309661.jpeg" alt="Foto Oriana Arellano" id="borde-redondo">
+    <section class="ficha-usuario">
+        <div>
+            <img src="28309661Big.jpeg" alt="Foto Oriana Arellano" class="imagen-grande">
+            <img src="28309661/28309661Small.jpg" alt="Foto Oriana Arellano" class="imagen-pequeña">
         </div>
-        <div id="margen">
-            <h1 class="main-color">Oriana Arellano</h1>
-            <p id="flex-font">Soy estudiantes de Computación en la Universidad Central de Venezuela (UCV),
-                actualmente cursando el septimo semestre de la carrera. Además, soy auxiliar
-                docente del laboratorio de Sonorización de Datos y preparadora de la materia
-                Matemáticas Discretas I. Me apasiona la música y por eso me gustaria especializarme en la
-                Sonorización de Datos, además me gustan mucho las redes y las Bases de Datos.
+        <div class="margen">
+            <h1>Oriana Arellano</h1>
+            <p class="letra-cursiva">
+                Soy estudiantes de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el
+                septimo semestre de
+                la carrera. Además, soy auxiliar docente del laboratorio de Sonorización de Datos y preparadora de la
+                materia Matemáticas Discretas I.
+                Me apasiona la música y por eso me gustaria especializarme en la Sonorización de Datos, además me gustan
+                mucho las redes y las Bases de Datos.
             </p>
             <ul id="lista">
-                <li>Mi color favorito es: <span id="margin84">Magenta</span></li>
-                <li>Mi libro favorito es: <span id="margin88">Como Agua para Chocolate</span></li>
-                <li>Mi género musical favorito es: <span id="margin10">Pop/Rock</span></li>
-                <li>Mi videojuego favorito es: <span id="margin42">It Takes Two</span></li>
-                <li><strong>Lenguajes aprendidos: <span id="margin60">C/C++, Java, Kotlin, Prolog, Haskell</strong></li>
+                <li class="item-perfil">Mi color favorito es:<span>Magenta</span></li>
+                <li class="item-perfil">Mi libro favorito es: <span>Como Agua para Chocolate</span></li>
+                <li class="item-perfil">Mi género musical favorito es: <span>Pop/Rock</span></li>
+                <li class="item-perfil">Mi videojuego favorito es: <span>It Takes Two</span></li>
+                <li class="item-perfil"><span class="negrita">Lenguajes aprendidos:</span><span class="negrita">C/C++,
+                        Java, Kotlin, Prolog, Haskell</span></li>
             </ul>
-            <p>Si necesitan comunicarse conmigo me pueden escribir a: <br> <strong><a
-                        href="mailto:orianaarellanor@gmail.com"
-                        class="main-color">orianaarellanor@gmail.com</a></strong></p>
+            <p>Si necesitan comunicarse conmigo me pueden escribir a:
+                <a href="mailto:orianaarellanor@gmail.com">orianaarellanor@gmail.com</a>
+            </p>
         </div>
     </section>
 
