@@ -71,7 +71,7 @@ button {
     border: none;
 }
 
-nav+div {
+.icono-fondo {
     height: 50px;
     width: 50px;
     background-color: var(--accent-color);
@@ -157,6 +157,8 @@ section[class] div:first-child img {
     height: 100%;
     border-bottom-right-radius: 80px;
     max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .margen {
@@ -264,10 +266,6 @@ a:hover {
     }
 
     nav div {
-        display: none;
-    }
-
-    #icono {
         display: none;
     }
 
