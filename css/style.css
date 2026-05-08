@@ -340,7 +340,13 @@ a:hover {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    /*NO APLICA*/
+    .imagen-pequeña {
+        display: block;
+    }
+
+    .imagen-grande {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
