@@ -130,10 +130,11 @@ section h1 {
 }
 
 footer p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
     color: var(--grey-200);
     text-align: center;
     border-top: 2px solid var(--grey-200);
-    padding: 40px;
+    padding: 30px;
     margin-top: auto;
 }
 
@@ -167,6 +168,10 @@ section[class] div:first-child img {
     width: 70%;
     flex-direction: column;
     gap: 20px;
+}
+
+section[class] {
+     margin: 0 0 auto 0;
 }
 
 section[class] h1 {
@@ -298,7 +303,7 @@ a:hover {
 
     .letra-cursiva {
         font-size: 0.75rem;
-        margin-right: 40px;
+        margin-right: 5px;
     }
 
     #lista {
@@ -311,16 +316,14 @@ a:hover {
     }
 
     p {
-        font-size: 0.65rem;
-        margin-right: 40px;
+        font-size: 0.75rem;
     }
 
     section[class] a {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
     }
 
     footer p {
-        font-size: 0.40rem;
         padding: 25px 10px;
         margin-top: 20px;
     }
@@ -335,6 +338,10 @@ a:hover {
         justify-content: center;
     }
 
+    section[class] div:first-child{
+        padding: 0 0 8px 0;
+    }
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -345,12 +352,4 @@ a:hover {
     .imagen-grande {
         display: none;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    /*NO APLICA*/
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-    /*NO APLICA*/
 }
