@@ -8,14 +8,16 @@
     <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png">
     <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="conf/configES.json"></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <h1>ATI<span>[UCV]</span>Log</h1>
+            <h1 id="logo"><span></span></h1>
             <form>
-                <input placeholder="Nombre...">
-                <button>Buscar</button>
+                <input id="nombre">
+                <button id="btn-buscar"></button>
             </form>
             <div class="icono-fondo">
                 <img src="icon/userIcon.svg" alt="Icono de Usuario" id="icono">
@@ -27,21 +29,21 @@
         </nav>
     </header>
     <section>
-        <h1>Semestre 2026-1</h1>
+        <h1 id="semestre"></h1>
         <div class="informacion-usuario">
             <div>
-                <a href="28309661/profile.html">
+               <!-- <a href="profile.html">
                     <img src="28309661/28309661Big.jpeg" alt="Foto Oriana Arellano" class="imagen-grande">
                     <img src="28309661/28309661Small.jpg" alt="Foto Oriana Arellano" class="imagen-pequeña">
                     <h3>Oriana Arellano</h3>
                 </a>
-                
+            -->
             </div>
 
         </div>
     </section>
     <footer>
-        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+        <p id="footer"></p>
     </footer>
 </body>
 </html>
