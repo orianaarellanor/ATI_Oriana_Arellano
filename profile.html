@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oriana Arellano</title>
+    <title></title>
     <link rel="icon" sizes="32x32" href="icon/cropped-logonuevo-32x32.png">
     <link rel="icon" sizes="192x192" href="icon/cropped-logonuevo-192x192.png">
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="conf/configES.json"></script>
+    <script src="js/profile.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="index.html">
-                <h1>ATI<span>[UCV]</span>Log</h1>
+                <h1 id="logo"><span></span></h1>
             </a>
             <form>
-                <input placeholder="Nombre...">
-                <button>Buscar</button>
+                <input id="nombre">
+                <button id="btn-buscar"></button>
             </form>
             <div class="icono-fondo">
                 <img src="icon/userIcon.svg" alt="Icono de Usuario" id="icono">
@@ -28,41 +29,33 @@
             <div class="solo-movil">
                 <img src="icon/menuIcon.svg" alt="Icono Móvil">
             </div>
-
         </nav>
+
     </header>
 
     <section class="ficha-usuario">
         <div>
-            <img src="28309661/28309661Big.jpeg" alt="Foto Oriana Arellano" class="imagen-grande">
-            <img src="28309661/28309661Small.jpg" alt="Foto Oriana Arellano" class="imagen-pequeña">
+            <img id="foto-grande" src="" alt="" class="imagen-grande">
+            <img id="foto-pequena" src="" alt="" class="imagen-pequeña">
         </div>
         <div class="margen">
-            <h1>Oriana Arellano</h1>
-            <p class="letra-cursiva">
-                Soy estudiantes de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el
-                septimo semestre de
-                la carrera. Además, soy auxiliar docente del laboratorio de Sonorización de Datos y preparadora de la
-                materia Matemáticas Discretas I.
-                Me apasiona la música y por eso me gustaria especializarme en la Sonorización de Datos, además me gustan
-                mucho las redes y las Bases de Datos.
+            <h1 id="nombre-perfil"></h1>
+            <p id="descripcion-perfil" class="letra-cursiva">
             </p>
             <ul id="lista">
-                <li class="item-perfil">Mi color favorito es:<span>Magenta</span></li>
-                <li class="item-perfil">Mi libro favorito es: <span>Como Agua para Chocolate</span></li>
-                <li class="item-perfil">Mi género musical favorito es: <span>Pop/Rock</span></li>
-                <li class="item-perfil">Mi videojuego favorito es: <span>It Takes Two</span></li>
-                <li class="item-perfil"><span class="negrita">Lenguajes aprendidos:</span><span class="negrita">C/C++,
-                        Java, Kotlin, Prolog, Haskell</span></li>
+                <li class="item-perfil"><span id="etiq-color"></span> <span id="val-color"></span></li>
+                <li class="item-perfil"><span id="etiq-libro"></span> <span id="val-libro"></span></li>
+                <li class="item-perfil"><span id="etiq-musica"></span> <span id="val-musica"></span></li>
+                <li class="item-perfil"><span id="etiq-juego"></span> <span id="val-juego"></span></li>
+                <li class="item-perfil"><span id="etiq-lenguaje" class="negrita"></span> <span id="val-lenguaje" class="negrita"></span></li>
             </ul>
-            <p>Si necesitan comunicarse conmigo me pueden escribir a:
-                <a href="mailto:orianaarellanor@gmail.com">orianaarellanor@gmail.com</a>
+            <p id="etiq-email">
             </p>
         </div>
     </section>
 
     <footer>
-        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+        <p id="footer"></p>
     </footer>
 
 </body>
