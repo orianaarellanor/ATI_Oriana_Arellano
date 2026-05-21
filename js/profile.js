@@ -1,19 +1,30 @@
-document.getElementById("btn-buscar").innerText = config.search;
-document.getElementById("nombre").placeholder = config.name + "...";
-document.getElementById("logo").innerHTML = `${config.site[0]}<span>${config.site[1]}</span>${config.site[2]}`;
-document.getElementById("footer").innerText = config.copyRight;
-
 const urlParams = new URLSearchParams(window.location.search);
+let lang = urlParams.get('lang') || 'ES';
 const ciUrl = urlParams.get('ci');
 
-if(ciUrl){
-    const scriptPerfil = document.createElement('script');
-    scriptPerfil.src = `${ciUrl}/profile.json`;
-    scriptPerfil.onload = function(){
-        llenarDatosPerfil(profile);
-    };
-    document.head.appendChild(scriptPerfil);
-}
+const scriptConfig = document.createElement('script');
+scriptConfig.src = `conf/config${lang}.json`;
+
+scriptConfig.onload = function () {
+
+    document.getElementById("btn-buscar").innerText = config.search;
+    document.getElementById("nombre").placeholder = config.name + "...";
+    document.getElementById("logo").innerHTML = `${config.site[0]}<span>${config.site[1]}</span>${config.site[2]}`;
+    document.getElementById("footer").innerText = config.copyRight;
+
+    document.querySelector("nav a").href = `index.html?lang=${lang}`;
+
+    if (ciUrl) {
+        const scriptPerfil = document.createElement('script');
+        scriptPerfil.src = `${ciUrl}/profile.json`;
+        scriptPerfil.onload = function () {
+            llenarDatosPerfil(profile);
+        };
+        document.head.appendChild(scriptPerfil);
+    }
+};
+
+document.head.appendChild(scriptConfig);
 
 function llenarDatosPerfil(profile) {
     document.getElementById("foto-grande").src = `${profile.ci}/${profile.ci}Big${profile.image_ext}`;
@@ -24,26 +35,26 @@ function llenarDatosPerfil(profile) {
     document.getElementById("etiq-color").innerText = config.color + ":";
     document.getElementById("val-color").innerText = profile.color;
 
-    if(profile.book.length > 1){
+    if (profile.book.length > 1) {
         document.getElementById("etiq-libro").innerText = config.book[1] + ":";
         document.getElementById("val-libro").innerText = profile.book.join(", ");
-    }else {
+    } else {
         document.getElementById("etiq-libro").innerText = config.book[0] + ":";
         document.getElementById("val-libro").innerText = profile.book;
     }
 
-    if(profile.music.length > 1){
+    if (profile.music.length > 1) {
         document.getElementById("etiq-musica").innerText = config.music[1] + ":";
         document.getElementById("val-musica").innerText = profile.music.join(", ");
-    }else {
+    } else {
         document.getElementById("etiq-musica").innerText = config.music[0] + ":";
         document.getElementById("val-musica").innerText = profile.music;
     }
 
-    if(profile.video_game.length > 1){
+    if (profile.video_game.length > 1) {
         document.getElementById("etiq-juego").innerText = config.video_game[1] + ":";
         document.getElementById("val-juego").innerText = profile.video_game.join(", ");
-    }else {
+    } else {
         document.getElementById("etiq-juego").innerText = config.video_game[0] + ":";
         document.getElementById("val-juego").innerText = profile.video_game;
     }
