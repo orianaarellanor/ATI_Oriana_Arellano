@@ -258,6 +258,19 @@ a:hover {
     display: block;
 }
 
+.mensaje-vacio {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: 450;
+}
+
+.mensaje-vacio strong {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .ficha-usuario {
         flex-direction: column;

@@ -22,6 +22,18 @@ scriptConfig.onload = function () {
         };
         document.head.appendChild(scriptPerfil);
     }
+
+    //Redirigir al listado y efectuar la búsqueda automáticamente
+    const formulario = document.querySelector("nav form");
+    const inputBusqueda = document.getElementById("nombre");
+
+    if (formulario && inputBusqueda) {
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+            const textoBuscado = inputBusqueda.value.trim();
+            window.location.href = `index.html?lang=${lang}&search=${encodeURIComponent(textoBuscado)}`;
+        });
+    }
 };
 
 document.head.appendChild(scriptConfig);
