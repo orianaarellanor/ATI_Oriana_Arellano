@@ -271,6 +271,11 @@ a:hover {
     color: var(--accent-color);
 }
 
+.contenedor-perfil {
+    display: flex;
+    align-items: center;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .ficha-usuario {
         flex-direction: column;
@@ -359,7 +364,6 @@ a:hover {
     section[class] div:first-child{
         padding: 0 0 8px 0;
     }
-
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -368,6 +372,64 @@ a:hover {
     }
 
     .imagen-grande {
+        display: none;
+    }
+
+    #texto-perfil {
+        display: none;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    nav {
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    nav a { order: 1; } 
+    .solo-movil { order: 2; } 
+    
+    nav form {
+        order: 3;
+        display: none; 
+        width: 100%; 
+        border-top: 1px solid var(--grey-50); 
+        border-bottom: 1px solid var(--grey-50); 
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    nav .contenedor-perfil {
+        order: 4;
+        display: none;
+        width: 100%;
+        margin-top: 5px;
+        padding: 5px;
+        justify-content: flex-end; 
+    }
+
+    #texto-perfil {
+        color: var(--white);
+        margin-right: 15px;
+        font-size: 1.1rem;
+    }
+
+    nav.menu-abierto form, 
+    nav.menu-abierto .contenedor-perfil {
+        display: flex;
+    }
+
+    nav.menu-abierto form,
+    nav.menu-abierto .icono-fondo {
+        display: flex; 
+    }
+}
+
+@media (min-width: 769px) {
+    #texto-perfil {
         display: none;
     }
 }

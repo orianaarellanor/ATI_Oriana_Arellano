@@ -34,6 +34,19 @@ scriptConfig.onload = function () {
             window.location.href = `index.html?lang=${lang}&search=${encodeURIComponent(textoBuscado)}`;
         });
     }
+    
+    //Menú desplegable
+    if (document.getElementById("texto-perfil")) {
+            document.getElementById("texto-perfil").innerText = config.profile;
+        }
+        const botonMenu = document.querySelector(".solo-movil");
+        const navBar = document.querySelector("nav");
+
+        if (botonMenu && navBar) {
+            botonMenu.addEventListener("click", function() {
+                navBar.classList.toggle("menu-abierto");
+            });
+        }
 };
 
 document.head.appendChild(scriptConfig);

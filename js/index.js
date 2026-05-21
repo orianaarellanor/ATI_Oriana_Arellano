@@ -8,6 +8,8 @@ scriptConfig.src = `conf/config${lang}.json`;
 scriptConfig.onload = function () {
 
     document.getElementById("btn-buscar").innerText = config.search;
+        
+
     document.getElementById("semestre").innerText = config.semester;
     document.getElementById("nombre").placeholder = config.name + "...";
     document.getElementById("logo").innerHTML = `${config.site[0]}<span>${config.site[1]}</span>${config.site[2]}`;
@@ -72,6 +74,18 @@ scriptConfig.onload = function () {
         });
     }
 
+    //Menú desplegable
+    if (document.getElementById("texto-perfil")) {
+            document.getElementById("texto-perfil").innerText = config.profile;
+        }
+        const botonMenu = document.querySelector(".solo-movil");
+        const navBar = document.querySelector("nav");
+
+        if (botonMenu && navBar) {
+            botonMenu.addEventListener("click", function() {
+                navBar.classList.toggle("menu-abierto");
+            });
+        }
 };
 
 document.head.appendChild(scriptConfig);
