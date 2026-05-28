@@ -34,8 +34,8 @@ scriptConfig.onload = function () {
             const tarjeta = document.createElement("div");
 
             tarjeta.innerHTML = `
-                <img src="${perfil.ci}/${perfil.ci}Big${perfil.image_ext}" alt="Foto de ${perfil.name}" class="imagen-grande">
-                <img src="${perfil.ci}/${perfil.ci}Small${perfil.image_ext}" alt="Foto de ${perfil.name}" class="imagen-pequeña">
+                <img src="Profiles/${perfil.ci}/${perfil.ci}Big${perfil.image_ext}" alt="Foto de ${perfil.name}" class="imagen-grande">
+                <img src="Profiles/${perfil.ci}/${perfil.ci}Small${perfil.image_ext}" alt="Foto de ${perfil.name}" class="imagen-pequeña">
                 <h3>${perfil.name}</h3>
     `;
 

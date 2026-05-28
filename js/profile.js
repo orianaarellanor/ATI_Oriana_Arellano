@@ -16,7 +16,7 @@ scriptConfig.onload = function () {
 
     if (ciUrl) {
         const scriptPerfil = document.createElement('script');
-        scriptPerfil.src = `${ciUrl}/profile.json`;
+        scriptPerfil.src = `Profiles/${ciUrl}/profile.json`;
         scriptPerfil.onload = function () {
             llenarDatosPerfil(profile);
         };
@@ -52,8 +52,9 @@ scriptConfig.onload = function () {
 document.head.appendChild(scriptConfig);
 
 function llenarDatosPerfil(profile) {
-    document.getElementById("foto-grande").src = `${profile.ci}/${profile.ci}Big${profile.image_ext}`;
-    document.getElementById("foto-pequena").src = `${profile.ci}/${profile.ci}Small${profile.image_ext}`;
+    document.title = profile.name;
+    document.getElementById("foto-grande").src = `Profiles/${profile.ci}/${profile.ci}Big${profile.image_ext}`;
+    document.getElementById("foto-pequena").src = `Profiles/${profile.ci}/${profile.ci}Small${profile.image_ext}`;
     document.getElementById("nombre-perfil").innerText = profile.name;
     document.getElementById("descripcion-perfil").innerText = profile.description;
 
