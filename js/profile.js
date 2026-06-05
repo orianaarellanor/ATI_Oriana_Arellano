@@ -1,3 +1,6 @@
+//Prueba 1: Contexto Global
+console.log("Prueba 1 - Contexto Global:", this);
+
 const urlParams = new URLSearchParams(window.location.search);
 let lang = urlParams.get('lang') || 'ES';
 const ciUrl = urlParams.get('ci');
@@ -44,6 +47,9 @@ scriptConfig.onload = function () {
 
         if (botonMenu && navBar) {
             botonMenu.addEventListener("click", function() {
+                //Prueba 2: Event Listener
+                console.log("Prueba 2 - Event Listener:", this);
+
                 navBar.classList.toggle("menu-abierto");
             });
         }
@@ -90,3 +96,14 @@ function llenarDatosPerfil(profile) {
 
     document.getElementById("etiq-email").innerHTML = config.email.replace("[email]", `<a href="mailto:${profile.email}">${profile.email}</a>`);
 }
+
+//Prueba 3: Enlace Implícito en Objeto
+const perfilPrueba = {
+    nombre: "Oriana Arellano",
+    mostrarThis: function() {
+        console.log("Prueba 3 - Objeto:", this);
+        console.log("El nombre es:", this.nombre);
+    }
+};
+
+perfilPrueba.mostrarThis();
