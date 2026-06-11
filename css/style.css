@@ -97,10 +97,10 @@ button {
 
 .informacion-usuario h3 {
     width: 100%;
-    height: 60px;
+    height: auto;
     background-color: var(--white);
     font-size: 1rem;
-    padding: 10% 0 5% 5%;
+    padding: 15px 0px 15px 15px;
     color: var(--grey-950);
     font-weight: 500;
 }
@@ -253,7 +253,7 @@ a:hover {
 }
 
 .imagen-pequeña {
-    display: none;
+    display: none !important;
 }
 
 .imagen-grande {
@@ -283,12 +283,12 @@ a:hover {
         flex-direction: column;
     }
 
-    .imagen-pequeña {
-        display: block;
+    .imagen-grande {
+        display: none !important;
     }
 
-    .imagen-grande {
-        display: none;
+    .imagen-pequeña {
+        display: block !important;
     }
 
     nav form {
