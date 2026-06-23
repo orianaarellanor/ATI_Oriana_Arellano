@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav>
-            <h1 id="logo"><span></span></h1>
+            <h1 id="logo" onclick="volverAlListado()" style="cursor: pointer;" title="Volver al inicio"><span></span></h1>
             <form>
                 <input id="nombre">
                 <button id="btn-buscar"></button>
@@ -32,12 +32,36 @@
             </div>
         </nav>
     </header>
+    
     <section>
         <h1 id="semestre"></h1>
+        
         <div class="informacion-usuario">
         </div>
-    </section>
-    <footer>
+        
+        <div id="seccion-perfil" style="display: none;">
+
+            <section class="ficha-usuario">
+                <div>
+                    <img id="foto-grande" src="" alt="" class="imagen-grande">
+                    <img id="foto-pequena" src="" alt="" class="imagen-pequeña">
+                </div>
+                <div class="margen">
+                    <h1 id="nombre-perfil"></h1>
+                    <p id="descripcion-perfil" class="letra-cursiva"></p>
+                    <ul id="lista">
+                        <li class="item-perfil"><span id="etiq-color"></span> <span id="val-color"></span></li>
+                        <li class="item-perfil"><span id="etiq-libro"></span> <span id="val-libro"></span></li>
+                        <li class="item-perfil"><span id="etiq-musica"></span> <span id="val-musica"></span></li>
+                        <li class="item-perfil"><span id="etiq-juego"></span> <span id="val-juego"></span></li>
+                        <li class="item-perfil"><span id="etiq-lenguaje" class="negrita"></span> <span id="val-lenguaje" class="negrita"></span></li>
+                    </ul>
+                    <p id="etiq-email"></p>
+                </div>
+            </section>
+            
+        </div>
+    </section> <footer>
         <p id="footer"></p>
     </footer>
 </body>
